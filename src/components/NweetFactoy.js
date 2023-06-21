@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { addDoc, collection } from "firebase/firestore";
 import { useState } from "react";
 
-const NweetFactory = () => {
+const NweetFactory = ({ userObj }) => {
   const [nweet, setNweet] = useState("");
   const [attachment, setAttachment] = useState("");
   const [thumbnail, setThumbnail] = useState("");

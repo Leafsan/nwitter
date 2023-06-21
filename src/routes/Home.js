@@ -19,7 +19,7 @@ const Home = ({ userObj }) => {
 
   return (
     <>
-      <NweetFactory userObj />
+      <NweetFactory userObj={userObj} />
       <div>
         {nweets
           .sort((a, b) => b.createdAt - a.createdAt)
