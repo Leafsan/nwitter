@@ -5,7 +5,6 @@ import { updateProfile } from "firebase/auth";
 
 function App() {
   const [init, setInit] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userObj, setUserObj] = useState(null);
 
   useEffect(() => {
@@ -18,7 +17,7 @@ function App() {
             updateProfile(user, { displayName: user.displayName }),
         });
       } else {
-        setIsLoggedIn(false);
+        setUserObj(false);
       }
       setInit(true);
     });
@@ -34,7 +33,6 @@ function App() {
     });
   };
 
-  console.log(authService.currentUser);
   return (
     <>
       {init ? (
