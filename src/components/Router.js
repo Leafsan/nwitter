@@ -1,5 +1,5 @@
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Navigate,
   Route,
   Routes,
@@ -12,7 +12,7 @@ import MyNweet from "../routes/MyNweet";
 
 const AppRouter = ({ isLoggedIn, userObj, refreshUser }) => {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       {isLoggedIn && <Navigation userObj={userObj} />}
       <Routes>
         {isLoggedIn ? (

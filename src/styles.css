@@ -62,7 +62,6 @@ form {
     color: white;
     border-radius: 20px;
     background-color: #04aaff;
-    cursor: pointer;
 }
 
 .cancelBtn {
@@ -106,7 +105,7 @@ form {
 .factoryInput__input {
     flex-grow: 1;
     height: 40px;
-    padding: 0px 20px;
+    padding: 0 20px;
     color: white;
     border: 1px solid #04aaff;
     border-radius: 20px;
@@ -120,7 +119,7 @@ form {
     background-color: #04aaff;
     height: 40px;
     width: 40px;
-    padding: 10px 0px;
+    padding: 10px 0;
     text-align: center;
     border-radius: 20px;
     color: white;
@@ -229,12 +228,11 @@ form {
     cursor: pointer;
     border-radius: 20px;
     border: none;
-    padding: 10px 0px;
+    padding: 10px 0;
     font-size: 12px;
     text-align: center;
     width: 150px;
     background: white;
-    cursor: pointer;
 }
 
 /* AuthForm */
