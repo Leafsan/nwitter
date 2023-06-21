@@ -46,16 +46,14 @@ const NweetFactory = ({ userObj }) => {
       target: { files },
     } = event;
     const theFile = files[0];
-    if (Boolean(theFile)) {
-      const reader = new FileReader();
-      reader.readAsDataURL(theFile); //파일로부터 이미지 읽기
-      reader.onloadend = (finishedEvent) => {
-        const {
-          currentTarget: { result },
-        } = finishedEvent;
-        setThumbnail(result);
-      };
-    }
+    const reader = new FileReader();
+    reader.readAsDataURL(theFile); //파일로부터 이미지 읽기
+    reader.onloadend = (finishedEvent) => {
+      const {
+        currentTarget: { result },
+      } = finishedEvent;
+      setThumbnail(result);
+    };
     setAttachment(theFile); // 업로드 파일
   };
   const onClearAttachment = () => setAttachment("");
