@@ -23,19 +23,17 @@ const MyNweet = ({ userObj }) => {
   }, []);
 
   return (
-    <>
-      <div>
-        {myNweets
-          .sort((a, b) => b.createdAt - a.createdAt)
-          .map((nweet) => (
-            <Nweet
-              key={nweet.id}
-              nweetObj={nweet}
-              isOwner={nweet.createdId === userObj.uid}
-            />
-          ))}
-      </div>
-    </>
+    <div className="container">
+      {myNweets
+        .sort((a, b) => b.createdAt - a.createdAt)
+        .map((nweet) => (
+          <Nweet
+            key={nweet.id}
+            nweetObj={nweet}
+            isOwner={nweet.createdId === userObj.uid}
+          />
+        ))}
+    </div>
   );
 };
 

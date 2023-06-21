@@ -18,9 +18,9 @@ const Home = ({ userObj }) => {
   }, []);
 
   return (
-    <>
+    <div className="container">
       <NweetFactory userObj={userObj} />
-      <div>
+      <div style={{ marginTop: 30 }}>
         {nweets
           .sort((a, b) => b.createdAt - a.createdAt)
           .map((nweet) => (
@@ -31,7 +31,7 @@ const Home = ({ userObj }) => {
             />
           ))}
       </div>
-    </>
+    </div>
   );
 };
 
