@@ -34,7 +34,17 @@ function App() {
   };
 
   return (
-    <>
+    <div
+      style={{
+        maxWidth: 890,
+        width: "100%",
+        margin: "0 auto",
+        marginTop: 80,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       {init ? (
         <AppRouter
           refreshUser={refreshUser}
@@ -44,7 +54,7 @@ function App() {
       ) : (
         "initializing..."
       )}
-    </>
+    </div>
   );
 }
 
